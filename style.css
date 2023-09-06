@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+:root {
+  --pale_blue: hsl(221, 100%, 96%);
+  --dark_gray_blue: hsl(224, 30%, 27%);
+  --light_lavender: hsl(241, 100%, 89%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  background-color: rgba(255, 251, 240, 0.637);
+}
+
+p {
+  font-weight: 500;
+}
+
+#container {
+  display: flex;
+  box-shadow: 2px 8px 19px 0 rgba(2, 7, 95, 0.37);
+  border-radius: 30px;
+  font-family: "Hanken Grotesk";
+  font-weight: 500;
+  margin: 100px auto;
+  width: 600px;
+  height: 430px;
+  overflow: hidden;
+}
+
+#container__left-section {
+  color: var(--light_lavender);
+  border-radius: 30px;
+  font-size: medium;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  height: 100%;
+  padding: 35px;
+  text-align: center;
+  width: 50%;
+}
+
+#container__left-section h3 {
+  letter-spacing: 2px;
+}
+#container__left-section h2 {
+  color: var(--pale_blue);
+}
+
+#rounded-div {
+  text-align: center;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  padding: 10px;
+  margin: auto;
+  background: linear-gradient(hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+}
+
+#rounded-div div {
+  margin: auto;
+  margin-top: 20%;
+}
+
+#rounded-div p {
+  font-size: 14px;
+  margin: 0;
+}
+
+#container__left-section #big-number {
+  font-size: 2.9rem;
+  color: var(--pale_blue);
+  font-weight: 700;
+  margin: auto;
+}
+
+#container__right-section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 25px;
+}
+
+#r-section__status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#icone {
+  vertical-align: middle;
+}
+
+#container__right-section button {
+  background-color: var(--dark_gray_blue);
+  color: var(--light_lavender);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  width: 100%;
+  padding: 5.5%;
+  border: none;
+  border-radius: 30px;
+}
+
+#container__right-section button:hover {
+  cursor: pointer;
+  background-color: hsl(241, 81%, 54%);
+  color: var(--pale_blue);
+}
+
+#score {
+  color: var(--dark_gray_blue);
+  font-weight: 700;
+  margin-right: 3px;
+}
+
+.right-section__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.right-section__item p {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 5px;
+}
+
+.score {
+  color: var(--light_lavender);
+  font-weight: 500;
+}
+
+/* resonsive the card */
+
+@media (max-width: 412px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    box-shadow: none;
+  }
+
+  #container__left-section {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 100%;
+    height: 50%;
+  }
+
+  #container__right-section {
+    width: 100%;
+    height: 50%;
+  }
+
+  #container__right-section button {
+    margin-bottom: 0;
+  }
+}
